@@ -63,9 +63,47 @@
     if ($credits >= 50 && $isBonus == false) {
         $c -= 2;
     } elseif ($credits < 50 && $isBonus == false) {
-        $c --;
+        $c--;
     }
     echo $c . "<br>";
+
+    $d = 8;
+    $time = 120;
+    $out3 = "";
+    // if d is dividable by 4
+    // and time is not more than 200
+    // set out3 to "check"
+    // if time is more than 200
+    // set out3 to "Time out"
+    // otherwise set out3 to "Run Forest Run!"
+    if ($d % 4 === 0 && $time <= 200) {
+        $out3 = "check";
+    } elseif ($time > 200) {
+        $out3 = "Time out";
+    } else {
+        $out3 = "Run Forest Run!";
+    }
+    echo $out3 . "<br>";
+
+    //SUBSTRING:
+    //  Create a function that takes two strings as a parameter
+    //  Returns the starting index where the second one is starting in the first one
+    //  Returns `-1` if the second string is not in the first one
+    function SubString($string1, $string2)
+    {
+        $string1Lowercase = strtolower($string1);
+        $string2Lowercase = strtolower($string2);
+        if (strpos($string1Lowercase, $string2Lowercase) != false) {
+            return strpos($string1Lowercase, $string2Lowercase);
+        } else {
+            return -1;
+        }
+    }
+
+    echo SubString("this is what I'm searching in", "searching") . "<br>";
+    echo SubString("this is what I'm searching in", "not") . "<br>";
+
+
 
 
     ?>
