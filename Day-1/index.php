@@ -12,6 +12,17 @@
 
 echo "Hola Jorge";
 
+class Increment {
+
+    public $int =1;
+    public function inc(){
+
+    }
+}
+$var = new Increment();
+
+echo $var->int;
+
 $arr = [123, -123, 0x1A, 0b10010, 0123];
 
 ?>
