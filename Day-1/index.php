@@ -59,7 +59,7 @@ function f($p1, $p2 = "is") {
   return "this $p2 a $p1 = " . g();
 }
 
-function g() {
+function g2() {
   return "x";
 }
 

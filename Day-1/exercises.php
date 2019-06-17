@@ -101,9 +101,45 @@
     }
 
     echo SubString("this is what I'm searching in", "searching") . "<br>";
-    echo SubString("this is what I'm searching in", "not") . "<br>";
+    echo SubString("this is what I'm searching in", "not") . "<br><br>";
 
+    //DIAGONAL MATRIX:
+    // - Create (dynamically) a two dimensional array
+    //   with the following matrix. Use a loop!
+    //
+    //   1 0 0 0
+    //   0 1 0 0
+    //   0 0 1 0
+    //   0 0 0 1
+    //
+    // - Print this two dimensional array to the output
 
+    function CreateMatrix($size)
+    {
+        $array1 = array();
+
+        for ($i = 0; $i < $size; $i++) {
+            $array2 = array();
+            for ($j = 0; $j < $size; $j++) {
+                if ($i == $j) {
+                    $array2[$j] = 1;
+                } else {
+                    $array2[$j] = 0;
+                }
+            }
+            $array1[$i] = $array2;
+        }
+        return $array1;
+    }
+    $output = CreateMatrix(5);
+
+    foreach ($output as $key => $value) {
+        foreach ($value as $key2 => $value2) {
+            echo $value2 . " ";
+        }
+        echo "<br>";
+    }
+   
 
 
     ?>
