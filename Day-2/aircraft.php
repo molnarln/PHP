@@ -5,11 +5,13 @@
         public $Ammunition;
         public $MaxAmmo;
         public $BaseDamage;
+        public $AllDamage;
 
         function Fight()
         {
             $damage = $this->Ammunition * $this->BaseDamage;
             $this->Ammunition = 0;
+            $this->AllDamage += $damage;
             return $damage;
         }
         function Refill($amountOfRefill)
@@ -29,6 +31,13 @@
         function GetType()
         {
             return static::class;
+        }
+
+        function GetStatus()
+        {
+            echo "Type " . $this->GetType() .
+            ", Ammo: $this->Ammunition 
+            Base Damage: $this->BaseDamage, All Damage: $this->AllDamage";
         }
     }
 

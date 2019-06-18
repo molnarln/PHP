@@ -19,11 +19,17 @@
     require_once 'f16.php';
     require_once 'aircraft.php';
     require_once 'f35.php';
-        $f16 = new F16;
+    $f16 = new F16;
 
-        echo $f16->GetType();
+    echo $f16->GetType();
 
+    $f16->Refill(30);
+    $f16->Fight();
+    echo "<pre>";
+    var_dump($f16);
+    echo "</pre>";
 
+    echo $f16->GetStatus();
 
     ?>
 
