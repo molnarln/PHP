@@ -16,9 +16,9 @@
 
 <body>
     <?php
-    require_once 'f16.php';
-    require_once 'aircraft.php';
-    require_once 'f35.php';
+    require_once 'models/f16.php';
+    require_once 'models/aircraft.php';
+    require_once 'models/f35.php';
     $f16 = new F16;
 
     echo $f16->GetType();
@@ -29,7 +29,10 @@
     var_dump($f16);
     echo "</pre>";
 
-    echo $f16->GetStatus();
+    echo $f16->GetStatus() . "<br>";
+    
+
+
 
     ?>
 
